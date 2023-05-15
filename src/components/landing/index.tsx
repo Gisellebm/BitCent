@@ -1,7 +1,7 @@
 import Pagina from "../templates/Pagina";
 import Cabecalho from "./cabecalho";
 import Depoimentos from "./depoimentos";
-import Destaques from "./destaques";
+import Destaques from "./destaque";
 import Rodape from "./rodape";
 import Vantagens from "./vantagens";
 

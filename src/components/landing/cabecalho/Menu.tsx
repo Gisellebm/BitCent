@@ -8,13 +8,13 @@ export default function Menu() {
     }
     return  (
         <div className="flex gap2">
-            <MenuItem url="#" className="hidden sm:flex">
+            <MenuItem url="#inicio" className="hidden sm:flex">
                 Início
             </MenuItem>
-            <MenuItem url="#" className="hidden sm:flex">
+            <MenuItem url="#vantagens" className="hidden sm:flex">
                 Vantagens
             </MenuItem>
-            <MenuItem url="#" className="hidden sm:flex">
+            <MenuItem url="#depoimentos" className="hidden sm:flex">
                 Depoimentos
             </MenuItem>
             <MenuItem onClick={loginGoogle} className="bg-gradient-to-r from-indigo-600 to-cyan-600">
