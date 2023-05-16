@@ -1,13 +1,14 @@
 import Cabecalho from "@/components/templates/Cabecalho"
+import Conteudo from "@/components/templates/Conteudo"
 import Pagina from "@/components/templates/Pagina"
 
 export default function CadastroUsuario() {
     return (
         <Pagina>
             <Cabecalho/>
-            <div>
+            <Conteudo>
                 <h1>Cadastro de Usuário</h1>
-            </div>
+            </Conteudo>
         </Pagina>
     )
 }
