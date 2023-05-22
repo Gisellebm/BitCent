@@ -19,10 +19,18 @@ const AutenticacaoContext = createContext<AutenticacaoProps>({
 })
 
 export function AutenticacaoProvider(props: any) {
-    const [carregando, setCarregando] = useState<boolean>(false)
+    const [carregando, setCarregando] = useState<boolean>(true)
     const [usuario, setUsuario] = useState<Usuario | null>(null)
 
     const autenticacao = new Autenticacao()
+
+    useEffect(() => {
+        const cancelar = autenticacao.monitorar((usuario) => {
+            setUsuario(usuario)
+            setCarregando(false)
+        })
+        return () => cancelar()
+    }, [])
 
     async function loginGoogle() {
         const usuario = await autenticacao.loginGoogle()
