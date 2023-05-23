@@ -4,7 +4,6 @@ import Carregando from "@/components/templates/Carregando";
 import AutenticacaoContext from "@/data/contexts/AutenticacaoContext";
 import { useContext } from "react";
 
-
 export default function Home() {
   const { usuario, carregando } = useContext(AutenticacaoContext)
 

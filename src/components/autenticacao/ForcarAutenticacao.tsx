@@ -3,7 +3,6 @@ import { useRouter } from 'next/router'
 import AutenticacaoContext from '@/data/contexts/AutenticacaoContext'
 import Carregando from "@/components/templates/Carregando";
 
-
 interface ForcarAutenticacaoProps {
     children: any
 }

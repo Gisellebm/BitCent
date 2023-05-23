@@ -1,6 +1,6 @@
 import "dayjs/locale/pt-br"
 import Transacao from "@/logic/core/financas/Transacao";
-import Dinheiro from "@/logic/utils/dinheiro";
+import Dinheiro from "@/logic/utils/Dinheiro";
 import { Button, Group, Radio, TextInput } from "@mantine/core";
 import { DatePickerInput } from "@mantine/dates";
 import { TipoTransacao } from "@/logic/core/financas/TipoTransacao";
@@ -10,7 +10,7 @@ interface FormularioProps {
     transacao: Transacao
     salvar?: (transacao: Transacao) => void
     excluir?: (transacao: Transacao) => void
-    cancelar: () => void
+    cancelar?: () => void
 }
 
 export default function Formulario(props: FormularioProps) {
@@ -26,15 +26,13 @@ export default function Formulario(props: FormularioProps) {
                 <TextInput
                     label="Descrição"
                     value={dados.descricao}
-                    onChange={alterarAtributo("descricao")}
+                    onChange={alterarAtributo('descricao')}
                 />
-
                 <TextInput
                     label="Valor"
                     value={Dinheiro.formatar(dados.valor)}
                     onChange={alterarAtributo('valor', Dinheiro.desformatar)}
                 />
-
                 <DatePickerInput
                     label="Data"
                     value={dados.data}
@@ -42,7 +40,6 @@ export default function Formulario(props: FormularioProps) {
                     valueFormat="DD/MM/YYYY"
                     onChange={alterarAtributo('data')}
                 />
-
                 <Radio.Group
                     value={dados.tipo}
                     onChange={alterarAtributo('tipo')}
@@ -53,18 +50,15 @@ export default function Formulario(props: FormularioProps) {
                     </Group>
                 </Radio.Group>
             </div>
-
             <div className="flex px-4 sm:px-7 py-4 gap-3 bg-zinc-800">
                 <Button
                     className="bg-green-500" color="green"
                     onClick={() => props.salvar?.(dados)}
                 >Salvar</Button>
-
                 <Button
                     className="bg-zinc-500" color="gray"
                     onClick={props.cancelar}
                 >Voltar</Button>
-
                 <div className="flex-1"></div>
                 {props.transacao.id && (
                     <Button
@@ -74,6 +68,5 @@ export default function Formulario(props: FormularioProps) {
                 )}
             </div>
         </div>
-
     )
 }

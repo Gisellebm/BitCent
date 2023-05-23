@@ -6,6 +6,7 @@ interface MenuItemProps {
     onClick?: () => void;
     className?: string;
 }
+
 export default function MenuItem(props: MenuItemProps) {
     function renderizarBotao() {
         return (

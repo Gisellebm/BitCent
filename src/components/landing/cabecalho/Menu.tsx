@@ -6,7 +6,6 @@ import { useContext } from "react";
 export default function Menu() {
     const { loginGoogle }= useContext(AutenticacaoContext)
 
-
     return  (
         <div className="flex gap2">
             <MenuItem url="#inicio" className="hidden sm:flex">

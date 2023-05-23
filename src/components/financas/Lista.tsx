@@ -1,7 +1,7 @@
-import Transacao from "@/logic/core/financas/Transacao";
-import Data from "@/logic/utils/Data";
-import Dinheiro from "@/logic/utils/dinheiro";
-import { IconTrendingDown, IconTrendingUp } from "@tabler/icons-react";
+import Transacao from "@/logic/core/financas/Transacao"
+import Data from "@/logic/utils/Data"
+import Dinheiro from "@/logic/utils/Dinheiro"
+import { IconTrendingDown, IconTrendingUp } from "@tabler/icons-react"
 
 interface ListaProps {
     transacoes: Transacao[]
@@ -22,6 +22,7 @@ export default function Lista(props: ListaProps) {
             </span>
         )
     }
+
     function renderizarLinha(transacao: Transacao, indice: number) {
         return (
             <div key={transacao.id} className={`
@@ -35,6 +36,7 @@ export default function Lista(props: ListaProps) {
             </div>       
         )
     }
+
     return (
         <div className={`
             flex flex-col border border-zinc-700

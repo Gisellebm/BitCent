@@ -1,8 +1,9 @@
-//import AutenticacaoContext from '@/data/contexts/AutenticacaoContext'
+import AutenticacaoContext from '@/data/contexts/AutenticacaoContext'
 import { IconArrowRight, IconVideo } from '@tabler/icons-react'
 import { useContext } from 'react'
 
 export default function Slogan() {
+    const { loginGoogle } = useContext(AutenticacaoContext)
 
     function renderizarFrase() {
         return (
@@ -58,7 +59,7 @@ export default function Slogan() {
                         bg-gradient-to-r from-indigo-600 to-cyan-600
                         text-white px-5 py-2.5 rounded-md
                     `}
-                    
+                    onClick={loginGoogle}
                 >
                     <span className="font-thin md:text-sm text-base">
                         Iniciar <span className="hidden sm:inline">Agora</span>

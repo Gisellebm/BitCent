@@ -15,7 +15,7 @@ export default function Formularios() {
   useEffect(() => {
     if(!usuario) return
     alterarDados(usuario)
-  }, [usuario])
+  }, [usuario, alterarDados])
 
   async function salvar() {
     if(!usuario) return
