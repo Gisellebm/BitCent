@@ -12,9 +12,7 @@
 </p>
 
 <h2 align="center">
-    <video width="520" height="340" autoplay muted>
-    <source src="./public/BitCENT.mp4" type="video/mp4">
-    </video>
+    <img alt="Bitcent" src=".github/cover.svg" />
 </h2>
 
 <br>
